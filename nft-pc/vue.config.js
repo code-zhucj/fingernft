@@ -54,7 +54,7 @@ module.exports = {
         hotOnly: false,
         disableHostCheck: false,
         proxy: {
-            '/fingernft': {
+            '/xumi': {
               target: 'http://10.86.7.206:20004',
             },
             "/static":{
