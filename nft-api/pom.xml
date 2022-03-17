@@ -24,4 +24,7 @@
 		<module>fingernft-core</module>
 		<module>fingernft-api</module>
 	</modules>
+	<build>
+		<defaultGoal>compile</defaultGoal>
+	</build>
 </project>
