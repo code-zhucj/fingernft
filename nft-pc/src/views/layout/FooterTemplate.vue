@@ -6,7 +6,7 @@
           <router-link to="/" class="head-FirstSvg">
             <img fit="contain"
               class="logo-image"
-              :src="require('@/assets/img/logo.jpg')"
+              :src="require('@/assets/img/logo-temp.jpeg')"
             />
           </router-link>
         </div>
@@ -86,10 +86,10 @@
         </div>
         <ul class="copyright">
           <li class="item">
-          @ 2021 fingerchar
+          @ 2022 xxxxxxxxx
           </li>
           <li class="item">
-          闽ICP备2020021234号-1
+          xxxxxxxxxxx
           </li>
         </ul>
       </div>

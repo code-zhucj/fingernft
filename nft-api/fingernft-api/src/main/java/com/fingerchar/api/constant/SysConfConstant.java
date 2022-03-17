@@ -2,7 +2,7 @@ package com.fingerchar.api.constant;
 
 public class SysConfConstant {
 	
-	public static final String URL_PREFIX = "/fingernft";
+	public static final String URL_PREFIX = "/xumi";
 
 	public static final String IPFS_URL = "ipfsUrl";
 	

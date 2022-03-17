@@ -119,6 +119,6 @@ public class FcSystemConfigService {
 		storageService.setStorage(localStorage);
     	Map<String, String> params = new HashMap<>();
     	params.put("data", JSON.toJSONString(configs));
-    	return HttpUtils.post(url + "/fingernft/refresh/refreshconfig", JSON.toJSONString(params));
+    	return HttpUtils.post(url + "/xumi/refresh/refreshconfig", JSON.toJSONString(params));
 	}
 }

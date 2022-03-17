@@ -76,10 +76,10 @@ export default {
     noContent: "No related content found",
   },
   title:{
-    manageBackground:'FingerNFT Manage Background',
+    manageBackground:'XuMi Manage Background',
   },
   login: {
-    title: "Management System",
+    title: "Xu Mi Management System",
     login: "Login",
     verificationCode:'Verification Code',
   },

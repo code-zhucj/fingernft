@@ -11,7 +11,7 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
-const name = 'fingernft' // page title
+const name = 'xumi' // page title
 
 // If your port is set to 80,
 // use administrator privileges to execute the command line.

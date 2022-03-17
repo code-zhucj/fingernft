@@ -12,7 +12,7 @@ function getApiObj(url, data = {}) {
   return api;
 }
 
-const URL_PREFIX = "/fingernft"
+const URL_PREFIX = "/xumi"
 export default function api(url, data = {}) {
   var api = getApiObj(url);
   var post = {

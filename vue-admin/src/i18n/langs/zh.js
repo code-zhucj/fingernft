@@ -77,7 +77,7 @@ export default {
     noContent: "没有找到相关内容",
   },
   title:{
-    manageBackground:'FingerNFT管理后台',
+    manageBackground:'XuMi管理后台',
   },
   login: {
     title: "管理后台",

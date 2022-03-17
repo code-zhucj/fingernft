@@ -185,7 +185,7 @@ $light_gray: #eee;
   width: 100%;
   background-color: $bg;
   overflow: hidden;
-  background-image: url('~@/assets/image/login-bg.png');
+  background-image: url('~@/assets/image/login-bg.jpeg');
   background-size: cover;
 
   .login-form {
@@ -200,7 +200,7 @@ $light_gray: #eee;
     border-radius: 20px;
     .inner{
       padding: 60px 35px;
-      background: #fff;
+      background: rgba(255, 255, 255, 0);
       border-radius: 20px;
     }
   }

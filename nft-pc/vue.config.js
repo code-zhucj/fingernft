@@ -35,7 +35,7 @@ module.exports = {
       'axios',
     ],
     pwa: {
-      name: "Finger NFT",
+      name: "XuMi",
       iconPaths: {
         favicon32: 'favicon.ico',
         favicon16: 'favicon.ico',
