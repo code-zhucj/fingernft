@@ -3,7 +3,7 @@
     <div class="home-header" id="home-header" :style="style">
       <router-link to="/" class="head-FirstSvg">
         <img fit="contain" class="logo-image"
-          :src="require('@/assets/img/logo-temp.jpeg')"
+          :src="require('@/assets/img/logo-temp.png')"
         />
       </router-link>
 
@@ -130,7 +130,7 @@
 
                 <div class="myself-unit">
                   <img class="paytoken-img"
-                    src="@/assets/img/logo-temp.jpeg"
+                    src="@/assets/img/logo-temp.png"
                   />
                   <div class="myself-unit-text">
                     <div class="myself-unit-title">
