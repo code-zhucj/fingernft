@@ -7,7 +7,7 @@ Vue.use(VueI18n)
 const i18n = new VueI18n({
   legacy: false,
   globalInjection: true,
-  locale: localStorage.getItem('locale') || 'en',
+  locale: localStorage.getItem('locale') || 'zh',
   messages: {
     en: en,
     zh: zh

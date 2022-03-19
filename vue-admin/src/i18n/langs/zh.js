@@ -80,7 +80,7 @@ export default {
     manageBackground:'须弥管理后台',
   },
   login: {
-    title: "管理后台",
+    title: "须弥管理后台",
     login: "登录",
     verificationCode:'验证码',
   },
@@ -480,7 +480,7 @@ export default {
       salt: "Hash",
       authorize: "授权",
       integer: "请输入整数",
-      owner: "收款地址",
+      // owner: "收款地址",
     },
     set:{
       select: "选择",

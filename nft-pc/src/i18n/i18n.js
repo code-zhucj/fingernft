@@ -13,7 +13,7 @@ const messages = {
 const i18n = new createI18n({
   legacy: false,
   globalInjection: true,
-  locale: localStorage.getItem('locale') || 'en',
+  locale: localStorage.getItem('locale') || 'zh',
   messages
 })
 
