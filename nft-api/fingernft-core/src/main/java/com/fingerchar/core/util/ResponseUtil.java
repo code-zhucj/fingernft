@@ -130,6 +130,14 @@ public class ResponseUtil {
         return obj;
     }
 
+    public static Object fail(int errno, String errmsg, String data) {
+        Map<String, Object> obj = new HashMap<String, Object>(3);
+        obj.put(SysConstant.RESULT_ERRNO, errno);
+        obj.put(SysConstant.RESULT_ERRMSG, errmsg);
+        obj.put(SysConstant.RESULT_DATA, data);
+        return obj;
+    }
+
     public static Object badArgument() {
         return fail(401, SysConstant.RESULT_MSG_BAD_ARGUMENT);
     }
