@@ -50,7 +50,7 @@ public class FcMerchantService {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         String encode = passwordEncoder.encode(password);
         FcMerchant fcMerchant = new FcMerchant();
-        fcMerchant.setStatus(true);
+        fcMerchant.setStatus(false);
         fcMerchant.setPassword(encode);
         fcMerchant.setUsername(merchantName);
         fcMerchant.setLastLoginIp(ip);
