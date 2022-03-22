@@ -185,7 +185,7 @@ export default {
               .catch((response) => {
                 this.getCode();
                 this.$notify.error({
-                  title: this.$t('notify.title'),
+                  title: this.$t('merchant.loginFailed'),
                   message: this.$t('response.' + response.errno)
                 });
                 this.loading = false;
@@ -206,13 +206,13 @@ export default {
                 if (this.$tools.checkResponse(res)) {
                   this.closeLoginForm();
                   this.$message({
-                    message: $t('merchant.loginSuccess'),
+                    message: this.$t('merchant.loginSuccess'),
                     type: 'success'
                   });
                 } else {
                   this.getCode();
                   this.$message({
-                    message: $t('merchant.loginFailed'),
+                    message: this.$t('merchant.loginFailed'),
                     type: 'error',
                     center: true
                   });
@@ -221,7 +221,7 @@ export default {
               .catch((response) => {
                 this.getCode();
                 this.$notify.error({
-                  title: this.$t('notify.title'),
+                  title: this.$t('merchant.loginFailed'),
                   message: this.$t('response.' + response.errno)
                 });
                 this.loading = false;
