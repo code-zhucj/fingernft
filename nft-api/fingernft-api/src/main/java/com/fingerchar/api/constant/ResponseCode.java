@@ -8,6 +8,7 @@ package com.fingerchar.api.constant;
  */
 public class ResponseCode {
 
+    public static final Integer REGISTRATION_FAILED = 604;
     public static final Integer INVALID_ACCOUNT = 605;
     public static final Integer INVALID_KAPTCHA = 606;
     public static final Integer INVALID_KAPTCHA_REQUIRED = 607;

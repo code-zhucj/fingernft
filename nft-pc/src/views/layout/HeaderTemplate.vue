@@ -50,7 +50,7 @@
           class="create-link"
           to="/Create"
         >
-          <el-button class="custom-button" round size="mini">
+          <el-button v-if="this.$store.state.merchant.isLoginMerchant" class="custom-button" round size="mini">
             {{ $t("navigation.create") }}
           </el-button>
         </router-link>

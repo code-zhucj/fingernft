@@ -16,6 +16,12 @@
           >
             {{ $t("footer.explore") }}
           </router-link>
+
+          <div :class="'router-text'" @click="visible = true">
+            {{ $t("footer.merchants") }}
+          </div>
+           <Merchant :show="visible" @closeLoginForm="visible = false" ></Merchant>
+
           <router-link
             v-if="connected && user.coinbase"
             :class="$route.name == 'Items' ? 'router-text active' : 'router-text'"
@@ -98,7 +104,9 @@
 </template>
 <script>
 import { ref, computed } from "vue";
+import Merchant from "../../components/merchant/Merchant";
 export default {
+  components: {Merchant},
   setup() {
     const PopoverSelectActive = ref("English");
     return {
@@ -108,6 +116,7 @@ export default {
   name: "FooterTemplate",
   data: function () {
     return {
+      visible:false,
       languagePopoverState: false,
       searchKey: this.$route.query.keyword,
     };

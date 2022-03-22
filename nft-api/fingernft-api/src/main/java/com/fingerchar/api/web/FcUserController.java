@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -307,6 +308,7 @@ public class FcUserController extends BaseController {
         return ResponseUtil.okList(this.processNft(list), list);
     }
 
+    @RequiresAuthentication
     @PostMapping("created")
     public Object created(String address) {
         if (null == address) {

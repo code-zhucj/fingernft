@@ -332,4 +332,18 @@ export default {
       method: "post",
     },
   },
+  merchant:{
+    kaptcha:{
+      url: "/merchant/kaptcha",
+      method: "post",
+    },
+    login:{
+      url: "/merchant/login",
+      method: "post",
+    },
+    register:{
+      url: "/merchant/register",
+      method: "post",
+    },
+  }
 }

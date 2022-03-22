@@ -10,18 +10,21 @@ import com.fingerchar.db.base.BaseEntity;
  * @Description 商户信息
  * @createTime 2022年03月20日 14:30:00
  */
-@TableName("'fc_merchant'")
+@TableName("fc_merchant")
 public class FcMerchant extends BaseEntity {
-    @TableField("'username'")
+    @TableField("username")
     private String username;
-    @TableField("'password'")
+    @TableField("password")
     private String password;
-    @TableField("'status'")
+    @TableField("status")
     private Boolean status;
-    @TableField("`last_login_time`")
+    @TableField("last_login_time")
     private Long lastLoginTime;
-    @TableField("`last_login_ip`")
+    @TableField("last_login_ip")
     private String lastLoginIp;
+
+    public static final String STATUS = "status";
+    public static final String USERNAME = "username";
 
     public Long getLastLoginTime() {
         return lastLoginTime;

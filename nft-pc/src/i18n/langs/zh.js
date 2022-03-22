@@ -12,6 +12,8 @@ module.exports = {
     errConnect: "连接失败",
     errNetwork: "网络错误",
     errSignature: "签名失败",
+    login: "登陆",
+    register: "注册",
   },
   home:{
     tip1: "开源的去中心化NFT市场",
@@ -182,6 +184,10 @@ module.exports = {
     limitLowestAcceptPrice: "最低接受价低于起拍价",
     noMinBidIncrement: "最低加价空间不能为空",
     noDividendRate: "分红比例不能为空",
+    limitMerchant: "*密码长度应大于6",
+    emptyMerchant: "*账户不允许为空",
+    emptyPassword: "*密码不允许为空",
+    emptyCode: "*验证码不允许为空",
   },
   request: {
     saleSuccess: "出售成功",
@@ -226,7 +232,8 @@ module.exports = {
     privacy: '隐私',
     home: '首页',
     myItems: '我的物品',
-    following: '关注的'
+    following: '关注的',
+    merchants: '成为商户',
   },
   hindex: {
     price: '价格',
@@ -421,5 +428,22 @@ module.exports = {
     mint: '铸造',
     text3: '出售标识信息',
     sale: '出售',
+  },
+  placeholder: {
+    manager: "账户",
+    password: "密码",
+    confirmPassword: "请确认密码",
+    enterPasswordAgain: "请再次输入密码",
+    differentPassword: "两次输入密码不一致",
+    toLogin: "前往登陆",
+    toRegister: "前往注册",
+  },
+  merchant: {
+    title: "sss",
+    login: "登录",
+    register: "注册",
+    verificationCode:'验证码',
+    loginSuccess: "登陆成功",
+    loginFailed: "登陆失败",
   },
 }

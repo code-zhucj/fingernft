@@ -26,6 +26,10 @@ export default {
   },
   ethBalance: '0',
   erc20Balance: {},
+  merchant: {
+    isLoginMerchant: false,
+    merchantUsername: "",
+  },
   user: {
     coinbase: "",
     avatar: "",

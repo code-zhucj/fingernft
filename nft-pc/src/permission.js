@@ -4,14 +4,27 @@ import store from "./store";
 
 
 router.beforeEach(async(to, from, next) => {
-  const items = getLocalStorage("connected")
+  const items = getLocalStorage("connected");
+  const isLoginMerchant = getLocalStorage("isLoginMerchant").isLoginMerchant;
   if(items.connected){
-    next();
+    if(isLoginMerchant){
+      next();
+    } else if(to.meta.loginMerchant){
+      next(from.path);
+    } else {
+      next();
+    }
   }else{
     if(to.meta.auth){
       next(`/connect?redirect=${to.path}`);
     }else{
-      next();
+      if(isLoginMerchant){
+        next();
+      } else if(to.meta.loginMerchant){
+        next(from.path);
+      } else {
+        next();
+      }
     }
   }
 });

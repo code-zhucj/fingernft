@@ -216,6 +216,36 @@ export default {
       resolve(true);
     });
   },
+  registerMerchant({state, commit, dispatch}, userInfo) {
+    return new Promise(async function (resolve, reject) {
+      var data = {
+        username: userInfo.username.trim(),
+        password: userInfo.password,
+        code: userInfo.code,
+      }
+      api("merchant.register", data).then(res => {
+        if (tools.checkResponse(res)) {
+          commit("LOGIN_MERCHANT", data);
+        }
+        resolve(res);
+      });
+    });
+  },
+  signLoginMerchant({state, commit, dispatch}, userInfo) {
+    return new Promise(async function (resolve, reject) {
+      var data = {
+        username: userInfo.username.trim(),
+        password: userInfo.password,
+        code: userInfo.code,
+      }
+      api("merchant.login", data).then(res => {
+        if (tools.checkResponse(res)) {
+          commit("LOGIN_MERCHANT", data);
+        }
+        resolve(res);
+      });
+    });
+  },
   signLogin({state, commit, dispatch}, payload){
     return new Promise(async function(resolve, reject){
       let user = payload;

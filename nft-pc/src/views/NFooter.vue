@@ -20,6 +20,11 @@ export default {
       default: null
     }
   },
+  watch: {
+    $route(newRoute) {
+
+    },
+  },
   methods: {}
 };
 </script>

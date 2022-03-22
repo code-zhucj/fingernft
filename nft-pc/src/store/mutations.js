@@ -32,6 +32,11 @@ export default {
       walletType: payload.walletType,
     });
   },
+  LOGIN_MERCHANT(state, data) {
+    state.merchant.isLoginMerchant = true;
+    state.merchant.merchantUsername = data.merchantUsername;
+    setLocalStorage({"isLoginMerchant": true});
+  },
   LOGIN(state, payload){
     state.token = payload.token;
     if(payload.user && payload.user.address){
@@ -91,6 +96,10 @@ export default {
     state.isLogin = true;
     var items = getLocalStorage("Authorization");
     state.token = items.Authorization;
+  },
+  RELOAD_MERCHANT(state){
+    var items = getLocalStorage("isLoginMerchant");
+    state.merchant.isLoginMerchant = items.isLoginMerchant;
   },
   USERINFO(state, payload){
     if(payload.address) payload.address = payload.address.toLocaleLowerCase();

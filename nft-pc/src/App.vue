@@ -24,6 +24,7 @@ export default {
       await this.$store.dispatch("reload");
     }
     this.$store.commit("WEB_LOADING");
+    this.$store.commit("RELOAD_MERCHANT");
   },
   data() {
     return {

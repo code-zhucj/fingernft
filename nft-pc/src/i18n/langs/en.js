@@ -186,6 +186,10 @@ module.exports = {
     limitLowestAcceptPrice: "*Lowest acceptable price less than start price",
     noMinBidIncrement: "*Minimum bid increment cannot be empty",
     noDividendRate: "*Dividend rate cannot be empty",
+    limitMerchant: "*password must contain more than 6 characters",
+    emptyMerchant: "*account cannot be empty",
+    emptyPassword: "*password cannot be empty",
+    emptyCode: "*verification code cannot be empty",
   },
   request:{
     saleSuccess: "Success",
@@ -225,7 +229,8 @@ module.exports = {
     privacy: 'Privacy',
     home: 'Home',
     myItems: 'My Items',
-    following: 'Following'
+    following: 'Following',
+    merchants: 'merchants',
   },
   hindex: {
     price: 'Price',
@@ -418,5 +423,22 @@ module.exports = {
     mint: 'Mint',
     text3: 'Sign message to sale',
     sale: 'Sale',
+  },
+  placeholder: {
+    manager: "account",
+    password: "password",
+    confirmPassword: "please check password",
+    enterPasswordAgain: "please enter password again",
+    differentPassword: "different password",
+    toLogin: "go to login",
+    toRegister: "go to register",
+  },
+  merchant: {
+    title: "sss",
+    login: "login",
+    register: "register",
+    verificationCode:'verification code',
+    loginSuccess: "login success",
+    loginFailed: "login failed",
   },
 }

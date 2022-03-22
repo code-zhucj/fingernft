@@ -48,6 +48,7 @@ const routes = [
     component: NFooter,
     meta: {
       auth: true,
+      loginMerchant: true,
       view: markRaw(ERC721)
     }
   },
