@@ -10,7 +10,7 @@ const app = {
       withoutAnimation: false
     },
     device: 'desktop',
-    language: Cookies.get('language') || 'en',
+    language: Cookies.get('language') || 'zh',
     size: Cookies.get('size') || 'small',
     bashApi: Cookies.get('bashApi') || process.env.VUE_APP_BASE_API,
     setting: setting

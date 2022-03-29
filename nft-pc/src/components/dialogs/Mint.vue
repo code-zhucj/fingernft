@@ -244,6 +244,7 @@ export default {
         ...this.asset,
         price: this.nft.form.price,
         sellerFee: this.config.sellerFee,
+        quantity: this.nft.form.quantity,
       };
       let result = await this.saleToken(asset);
       if (result.error) {
@@ -353,12 +354,11 @@ export default {
             if (that.nft.form.properties.length) {
               properties = JSON.stringify(that.nft.form.properties);
             }
-            let quantity = 1;
             var _data = {
               address: asset.address,
               storageId: asset.storageId,
               imgUrl: asset.url,
-              quantity: quantity,
+              quantity: that.nft.form.quantity,
               tokenId: asset.tokenId,
               description: that.nft.form.description,
               royalties: JSON.stringify([that.nft.form.royalties]),
@@ -391,7 +391,7 @@ export default {
     async saleToken(asset) {
       return new Promise((resolve, reject) => {
         var paytoken = this.nft.payToken;
-        let quantity = 1;
+        let quantity = new BigNumber(asset.quantity).toFixed(); // 这里可以做成可选择的,目前是之前填多少个，这里就需要出售多少个
         let sellType=this.$sdk.valueAssetType("ERC721")
         let buyValue = new BigNumber(this.nft.form.price);
         buyValue = buyValue.multipliedBy(new BigNumber(quantity));

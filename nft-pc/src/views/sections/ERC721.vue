@@ -202,6 +202,17 @@
                     </el-select>
                   </template>
                 </el-input>
+
+                <el-input v-if="createForm.onSale"
+                          type="number"
+                          placeholder="1"
+                          :min="1"
+                          v-model="createForm.quantity">
+                  <template #suffix>
+                    <el-tag  effect="plain" type="info" >{{$t("dialog.putOnSale")}}{{$t("dialog.enterQuantity")}}</el-tag>
+                  </template>
+              </el-input>
+
                 <div
                   class="form-error-tip error-position"
                   v-if="errorForm.price"
@@ -466,6 +477,7 @@ export default {
         name: "",
         description: "",
         category: "",
+        quantity: "1",
         properties: [
           {
             key: "",
@@ -514,13 +526,17 @@ export default {
     },
     profit: function () {
       var price = this.createForm.price;
+      var quantity = this.createForm.quantity;
       price = this.$tools.str2num(price);
+      quantity = this.$tools.str2num(quantity);
       if (!price) return 0;
+      if (!quantity) return 0;
       price = new BigNumber(this.createForm.price);
+      quantity = new BigNumber(this.createForm.quantity);
       let fee = new BigNumber(this.serverFee);
       fee = fee.multipliedBy(price);
       fee = fee.dividedBy(new BigNumber(100));
-      let profit = price.minus(fee).toFixed();
+      let profit = price.minus(fee).multipliedBy(quantity).toFixed();
       return profit;
     },
     config: function () {

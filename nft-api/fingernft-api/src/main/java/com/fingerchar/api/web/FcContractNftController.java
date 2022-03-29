@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -55,6 +56,7 @@ public class FcContractNftController extends BaseController {
 	@Autowired
 	FcNftItemsService nftItemsService;
 
+	@RequiresAuthentication
 	@PostMapping("add")
 	public Object add(FcContractNft nft,String address) {
 		String userAddress = (String) request.getAttribute("userAddress");

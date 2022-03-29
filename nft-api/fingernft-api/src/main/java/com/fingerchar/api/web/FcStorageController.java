@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
+import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,7 +39,8 @@ public class FcStorageController extends BaseController {
      * @return
      * @throws IOException
      */
-    @PostMapping("/upload")
+	@RequiresAuthentication
+	@PostMapping("/upload")
     public Object upload(@RequestParam("file") MultipartFile file) throws IOException {
         String originalFilename = file.getOriginalFilename();
         FcStorage fcStorage = storageService.store(file.getInputStream(), file.getSize(), file.getContentType(), originalFilename);
@@ -48,8 +50,9 @@ public class FcStorageController extends BaseController {
         	return ResponseUtil.ok(fcStorage);        	
         }
     }
-    
-    @PostMapping("/multiupload")
+
+	@RequiresAuthentication
+	@PostMapping("/multiupload")
     public Object multiUpload(@RequestParam("files") MultipartFile[] files) throws IOException {
     	int len = files.length;
     	String[] fileNames = new String[len];

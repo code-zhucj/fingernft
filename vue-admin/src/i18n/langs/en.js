@@ -474,7 +474,7 @@ export default {
       salt: "Hash",
       authorize: "Authorize",
       integer: "please enter an integer",
-      owner: "Receiving address",
+      receiving_address: "Receiving address",
     },
     set:{
       select: "Select",

@@ -22,8 +22,11 @@ export default {
     
     if(contract.error) return contract
     try{
-      return await contract.mint(asset.tokenId, asset.signature.v, asset.signature.r, asset.signature.s,
+      debugger;
+      let result =  await contract.mint(asset.tokenId, asset.signature.v, asset.signature.r, asset.signature.s,
         asset.fees, asset.tokenURI, {from: owner});
+      debugger;
+      return result;
     }catch(e){
       return {error: e.message}
     }

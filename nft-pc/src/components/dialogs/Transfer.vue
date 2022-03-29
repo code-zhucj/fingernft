@@ -40,6 +40,19 @@
             <div class="input-error" v-if="formError.address">
               {{ formError.address }}
             </div>
+            <div class="tip">
+              <span class="text">{{ $t("dialog.enterQuantity") }}</span>
+            </div>
+            <el-input
+                class="cel-dialog-input"
+                placeholder="1"
+                type="number"
+                v-model="form.quantity"
+            >
+            </el-input>
+            <div class="input-error" v-if="formError.quantity">
+              {{ formError.quantity }}
+            </div>
           </div>
         </div>
         <div class="button-group">
@@ -103,10 +116,12 @@ export default {
       confirm: false,
       form: {
         address: "",
+        quantity: "1",
       },
       formError: {
         all: "",
         address: "",
+        quantity: "",
       },
       step: {
         transfer: 0,
@@ -152,6 +167,10 @@ export default {
         this.formError.address = this.$t("form.noAddress");
         error = true;
       }
+      if (!this.form.quantity) {
+        this.formError.quantity = this.$t("form.noQuantity");
+        error = true;
+      }
       console.log(this.form.address, this.$store.state.user.coinbase, "ii");
       if (
         this.form.address.toLowerCase() ==
@@ -177,7 +196,7 @@ export default {
         tokenId: this.nft.tokenId,
         type: this.nft.type,
         to: this.form.address,
-        quantity: 1,
+        quantity: this.form.quantity,
       };
       let result = await this.transferToken(asset);
       if (result.error) {
